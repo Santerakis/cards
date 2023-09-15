@@ -1,0 +1,94 @@
+@use 'src/styles/index';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  &.left {
+    margin-left: -8px;
+  }
+}
+
+.stateLayer {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  &:hover {
+    background-color: var(--color-dark-500);
+  }
+
+  &:focus {
+    background-color: var(--color-dark-100);
+    border: none;
+    outline: none;
+  }
+
+  &:active {
+    background-color: var(--color-dark-100);
+  }
+
+  &.disabled {
+    cursor: initial;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+}
+
+.checkboxRoot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+
+  border: 2px solid;
+  border-color: var(--color-light-900);
+  border-radius: 2px;
+
+  &:enabled {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: initial;
+    border-color: var(--color-dark-100);
+  }
+
+  &[data-state='checked'] {
+    background-color: var(--color-dark-900);
+  }
+
+  &[data-state='checked']:disabled {
+    color: var(--color-dark-100);
+    background-color: var(--color-light-700);
+  }
+}
+
+.checkboxIndicator {
+  width: 18px;
+  height: 18px;
+}
+
+.label {
+  @include index.font(0.875rem, 1.5rem);
+
+  cursor: pointer;
+  user-select: none;
+  color: var(--color-light-100);
+
+  &.disabledLabel {
+    cursor: initial;
+    color: var(--color-dark-100);
+  }
+}
