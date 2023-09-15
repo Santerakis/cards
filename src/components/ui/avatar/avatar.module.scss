@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+  gap: 0.3rem;
+  padding: 1.1rem;
+
+  .label_wrapper {
+    cursor: pointer;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    align-items: center;
+
+    padding: 0 0.13rem;
+  }
+
+  .root {
+    user-select: none;
+
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    vertical-align: middle;
+
+    border-radius: 99999px;
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 0.125rem var(--color-info-700);
+    }
+
+    .avatar_image {
+      object-fit: contain;
+    }
+
+    .avatarFallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: var(--font-weight-bold);
+      color: var(--color-dark-900);
+
+      background-color: #9dafb6;
+    }
+  }
+}
