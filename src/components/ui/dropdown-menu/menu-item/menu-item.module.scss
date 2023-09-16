@@ -1,0 +1,38 @@
+.menuItem {
+  cursor: pointer;
+
+  height: 100%;
+
+  line-height: 1;
+
+  border-radius: 0.188rem;
+  outline: none;
+
+  &.interactive {
+    &:hover {
+      background-color: var(--color-accent-900);
+
+      a {
+        color: var(--color-accent-300) !important;
+      }
+    }
+  }
+
+  .item {
+    user-select: none;
+
+    display: inline-flex;
+    gap: 0.75rem;
+    align-items: center;
+
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding: 0;
+
+    color: var(--color-light-100);
+
+    &:hover {
+      color: var(--color-accent-300) !important;
+    }
+  }
+}
