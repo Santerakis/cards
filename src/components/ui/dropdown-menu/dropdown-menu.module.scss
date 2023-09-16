@@ -1,0 +1,116 @@
+button {
+  all: unset;
+}
+
+.trigger {
+  cursor: pointer;
+}
+
+.content {
+  will-change: transform, opacity;
+
+  gap: 0.75rem;
+
+  padding: 0.75rem;
+
+  background: var(--color-dark-700);
+  border: 0.063rem solid var(--color-dark-500);
+  border-radius: 0.375rem;
+
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+
+  .menu_item {
+    padding: 0;
+  }
+}
+
+.content[data-side='top'] {
+  animation-name: slide-down-and-fade;
+}
+
+.content[data-side='right'] {
+  animation-name: slide-left-and-fade;
+}
+
+.content[data-side='bottom'] {
+  animation-name: slide-up-and-fade;
+}
+
+.content[data-side='left'] {
+  animation-name: slide-right-and-fade;
+}
+
+.arrow {
+  fill: var(--color-dark-700);
+  stroke: var(--color-dark-500); /* Цвет обводки */
+  stroke-dasharray: 34; /* Длина прерывистой линии */
+  stroke-dashoffset: 37; /* Смещение прерывистой линии */
+  stroke-width: 0.125rem; /* Толщина обводки */
+}
+
+.separator {
+  height: 0.063rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: var(--color-dark-500);
+}
+
+.icon_button {
+  cursor: pointer;
+  user-select: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+}
+
+@keyframes slide-up-and-fade {
+  from {
+    transform: translateY(0.125rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right-and-fade {
+  from {
+    transform: translateX(-0.125rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down-and-fade {
+  from {
+    transform: translateY(-0.125rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left-and-fade {
+  from {
+    transform: translateX(0.125rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
