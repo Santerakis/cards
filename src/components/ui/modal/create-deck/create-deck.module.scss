@@ -1,0 +1,30 @@
+.fileInput {
+  display: none;
+}
+
+.small {
+  width: 7.3916rem;
+  height: 3rem;
+}
+
+.medium {
+  width: 10.625rem;
+  height: 6.6875rem;
+}
+
+.large {
+  width: 30.25rem;
+  height: 7.4375rem;
+}
+
+.large,
+.medium,
+.small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.125rem;
+}
