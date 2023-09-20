@@ -1,0 +1,58 @@
+import type { Meta, StoryObj } from '@storybook/react'
+
+import { Tabs } from './'
+
+const meta = {
+  title: 'Components/Tabs',
+  component: Tabs,
+  decorators: [
+    Story => (
+      <div style={{ margin: '3em', display: 'flex', justifyContent: 'center' }}>
+        <Story />
+      </div>
+    ),
+  ],
+  tags: ['autodocs'],
+  args: {
+    tabs: [
+      { value: 'string123', tabName: 'my decks' },
+      { value: 'string456', tabName: 'my decks' },
+    ],
+    defaultValue: 'string123',
+    // eslint-disable-next-line no-console
+    onValueChange: value => console.log(value),
+  },
+} satisfies Meta<typeof Tabs>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {
+  args: {},
+}
+export const Tabs_with_label: Story = {
+  args: {
+    label: 'Your label',
+  },
+}
+
+export const Disabled: Story = {
+  args: {
+    tabs: [
+      { value: '123', tabName: 'my decks' },
+      { value: '456', tabName: 'all decks', disabled: true },
+    ],
+    defaultValue: '123',
+  },
+}
+
+export const Three_tabs: Story = {
+  args: {
+    tabs: [
+      { value: '123', tabName: 'my decks' },
+      { value: '789', tabName: 'decks' },
+      { value: '456', tabName: 'all decks' },
+    ],
+    defaultValue: '123',
+  },
+}
