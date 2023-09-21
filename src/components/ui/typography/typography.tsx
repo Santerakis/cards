@@ -41,6 +41,5 @@ export const Typography = <T extends ElementType = 'p'>(
     unselectable === 'on' && s.unselectable
   )
 
-  //TODO посмотреть стили
   return <Component className={cName} {...rest} />
 }
