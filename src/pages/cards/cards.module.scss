@@ -1,0 +1,83 @@
+.back {
+  cursor: pointer;
+
+  position: relative;
+
+  display: flex;
+  gap: 6px;
+  align-items: center;
+
+  width: fit-content;
+  margin-top: 24px;
+  margin-bottom: 33px;
+}
+
+.headerPage {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.94rem;
+}
+
+.textField {
+  margin-top: 25px;
+  margin-bottom: 24px;
+}
+
+.tableHead {
+  width: 100%;
+}
+
+.deckMenuSection {
+  display: flex;
+  gap: 1rem;
+}
+
+.tableRoot {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.image {
+  width: 10.625rem;
+  height: 6.6875rem;
+  object-fit: cover;
+  border-radius: 0.13rem;
+}
+
+.menuSection {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.cardImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 7.3916rem;
+  height: 3rem;
+
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.125rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.3rem;
+  align-items: center;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 0.62rem;
+}
